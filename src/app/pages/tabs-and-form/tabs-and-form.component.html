@@ -1,0 +1,54 @@
+<h2 class="content-block">{{name}}</h2>
+
+<dx-tab-panel>
+    <dxi-item title="Loacation Details">
+        <div class="main-section">
+            <section>
+                <img [src]="imageUrl">
+            </section>
+            <section class="form-section">
+                <form>
+                    <dx-form [colCount]="2">
+                        <dxi-item dataField="name" [editorOptions]="{ placeholder: 'Name' }">
+                            <dxi-validation-rule type="required" message="Name is required"></dxi-validation-rule>
+                        </dxi-item>
+                        <dxi-item class="text-area" dataField="description"
+                            [editorOptions]="{ placeholder: 'Description' }">
+                            <dxi-validation-rule type="required" message="Description is required">
+                            </dxi-validation-rule>
+                        </dxi-item>
+                        <dxi-item>
+                            <dx-select-box [dataSource]="categories" displayExpr="name" valueExpr="id"
+                                formControlName="category"></dx-select-box>
+                        </dxi-item>
+                        <dxi-item>
+                            <dx-select-box [dataSource]="categories" displayExpr="name" valueExpr="id"
+                                formControlName="category"></dx-select-box>
+                        </dxi-item>
+                        <dxi-item>
+                            <dx-select-box [dataSource]="categories" displayExpr="name" valueExpr="id"
+                                formControlName="category"></dx-select-box>
+                        </dxi-item>
+                        <dxi-item>
+                            <dx-select-box [dataSource]="categories" displayExpr="name" valueExpr="id"
+                                formControlName="category"></dx-select-box>
+                        </dxi-item>
+                        <dxi-item>
+                            <dx-select-box [dataSource]="categories" displayExpr="name" valueExpr="id"
+                                formControlName="category"></dx-select-box>
+                        </dxi-item>
+                    </dx-form>
+                    <div class="form-buttons">
+                        <dx-button [text]="'Save'" (onClick)="save()"></dx-button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </dxi-item>
+    <dxi-item title="Room Layout">
+        <!-- ... -->
+    </dxi-item>
+    <dxi-item title="Unvaliability">
+        <!-- ... -->
+    </dxi-item>
+</dx-tab-panel>
